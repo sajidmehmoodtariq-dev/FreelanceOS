@@ -72,7 +72,8 @@ app.get('/', (req, res) => {
 });
 
 // Routes will be mounted here
-// app.use('/api/organizations', require('./routes/organizations'));
+app.use('/api/dropdown-options', require('./routes/dropdownOptions'));
+app.use('/api/organizations', require('./routes/organizations'));
 
 // Error handling middleware (must be after routes)
 app.use(errorHandler);
