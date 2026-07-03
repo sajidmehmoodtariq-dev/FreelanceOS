@@ -19,7 +19,7 @@ android {
         vectorDrawables.useSupportLibrary = true
 
         // Build config for API URL
-        buildConfigField("String", "API_URL", "\"http://192.168.1.5:5000/api/\"")
+        buildConfigField("String", "API_URL", "\"https://freelanceos-backend.vercel.app/api/\"")
     }
 
     buildTypes {

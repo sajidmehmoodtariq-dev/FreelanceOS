@@ -63,6 +63,14 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// Root Endpoint
+app.get('/', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'Welcome to the FreelanceOS API'
+  });
+});
+
 // Routes will be mounted here
 // app.use('/api/organizations', require('./routes/organizations'));
 
