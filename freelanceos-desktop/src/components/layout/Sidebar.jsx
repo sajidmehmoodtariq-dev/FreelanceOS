@@ -1,12 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard } from 'lucide-react';
+import { LayoutDashboard, Building2 } from 'lucide-react';
 import clsx from 'clsx';
 
 const Sidebar = () => {
   return (
-    <div className="w-[220px] h-full bg-[#0f0f0f] flex flex-col fixed left-0 top-0 text-gray-300 border-r border-border">
-      <div className="h-12 flex items-center px-4 font-bold text-white text-lg draggable select-none">
+    <div className="w-[220px] h-full bg-[#0f0f0f] flex flex-col fixed left-0 top-0 text-gray-300 border-r border-border z-10">
+      <div className="h-12 flex items-center px-4 font-bold text-white text-lg draggable select-none shrink-0">
         FreelanceOS
       </div>
       
@@ -25,9 +25,24 @@ const Sidebar = () => {
           <LayoutDashboard size={18} />
           Dashboard
         </NavLink>
+
+        <NavLink
+          to="/organizations"
+          className={({ isActive }) =>
+            clsx(
+              'flex items-center gap-3 px-3 py-2 rounded-md text-sm transition-colors',
+              isActive
+                ? 'bg-primary/10 text-primary font-medium'
+                : 'hover:bg-muted hover:text-white'
+            )
+          }
+        >
+          <Building2 size={18} />
+          Organizations
+        </NavLink>
       </div>
 
-      <div className="p-4 text-xs text-gray-500 font-mono select-none no-drag">
+      <div className="p-4 text-xs text-gray-500 font-mono select-none no-drag shrink-0 border-t border-border">
         v1.0.0
       </div>
     </div>
